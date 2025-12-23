@@ -1,0 +1,18 @@
+:root{
+    --background-color:#fffff;
+}
+
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.6;
+    color: var(--text-main);
+}
+
+h1,h2,h3,h4,h5{
+    font-weight:600;
+    letter-spacing: -0.02em;
+}
+
+nav{
+    padding:5vh 2rem;
+}
