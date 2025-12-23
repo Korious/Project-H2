@@ -57,7 +57,9 @@ section {
 }
 
 .hero {
-    background-color: var(--background-color);
+    /* background-color: var(--background-color); */
+    background-image: url("https://github.com/Korious/Project-H2/blob/ee2517b4c0aed3d631f285a3c22b848c58e390e9/assets/hero.jpg");
+    background-repeat: repeat-y;
 }
 
 .card {
