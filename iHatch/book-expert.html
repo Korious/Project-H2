@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Book an Expert | iHatch</title>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <header id="nav"></header>
+
+  <!-- Page Header -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <h1 class="mb-2">Book an Expert</h1>
+      <p class="text-muted">
+        Find an expert for your start-up needs.
+      </p>
+    </div>
+  </section>
+
+  <!-- Booking Layout -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row">
+        <!-- Hub Summary -->
+        <div class="col-md-5 mb-4">
+          <div class="card h-100">
+                <div class="card-body">
+                    <img 
+                        src="./assets/Face (1).jpeg" 
+                        class="rounded-circle mb-3"
+                        width="80"
+                        height="80"
+                        alt="Expert profile"    
+                    >
+                    <h5 class="card-title text-right">Person Name</h5>
+                    <p class="card-text text-center">Short bio</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Booking Form -->
+        <div class="col-md-7">
+          <div class="card p-4">
+            <h4 class="mb-4">Booking Details</h4>
+
+            <form>
+              <div class="mb-3">
+                <label class="form-label">Full Name</label>
+                <input type="text" class="form-control" placeholder="Your name" />
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Email Address</label>
+                <input type="email" class="form-control" placeholder="you@email.com" />
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Date</label>
+                <input type="date" class="form-control" />
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Duration</label>
+                <select class="form-select">
+                  <option selected>Select duration</option>
+                  <option>Half day</option>
+                  <option>Full day</option>
+                  <option>Weekly</option>
+                </select>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Number of People</label>
+                <input type="number" class="form-control" placeholder="e.g. 5" />
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Additional Notes (optional)</label>
+                <textarea
+                  class="form-control"
+                  rows="3"
+                  placeholder="Any specific requirements?"
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary">
+                Request Booking
+              </button>
+            </form>
+
+            <p class="small text-muted mt-3">
+              This is a booking request. The hub will confirm availability.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div id="footer"></div>
+
+  <!-- Scripts -->
+  <script src="index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
