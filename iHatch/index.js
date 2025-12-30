@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () =>{
-    const loadPartial = (selector, file) =>{
+    const load = (selector, file) =>{
         fetch(file)
         .then(response => response.text())
         .then(data => {
@@ -7,9 +7,6 @@ document.addEventListener("DOMContentLoaded", () =>{
         });
     };
 
-    loadPartial("#nav", "nav.html");
-    loadPartial("#footer", "footer.html");
+    load("#nav", "nav.html");
+    load("#footer", "footer.html");
 });
-
-
-

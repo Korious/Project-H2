@@ -1,11 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}                       
+
 :root{
     --background-color:#fffff;
+    --back-color: #31C21B;
+    --lean-color: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+    --accent-color:#EC920A;
+    --gradient-color: linear-gradient(to right, rgba(233,140,0,0.815) 0%, rgba(233,140,0,0.815) 40%, rgba(19,223,36,0.7) 100% );
 }
 
 body{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     line-height: 1.6;
-    color: var(--text-main);
+    color: var(--back-color);
+    line-height: 1.6;
 }
 
 h1,h2,h3,h4,h5{
@@ -13,6 +24,306 @@ h1,h2,h3,h4,h5{
     letter-spacing: -0.02em;
 }
 
-nav{
-    padding:5vh 2rem;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header & Navigation */
+header {
+    background:var(--back-color);
+    box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    padding: 0rem 2rem;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+}
+
+.logo {
+    color: white;
+    font-size: 2.2rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2.5rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: var(--background-color);
+    transform: translateY(-2px);
+}
+
+nav img {
+    max-width: 24px;
+    height: auto;
+    filter: invert(1);
+}
+
+/* Hero Section */
+.hero {
+    background: var(--lean-color), 
+                url('assets/hero-bg.jpg') center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 6rem 0;
+    margin-bottom: 3rem;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+}
+
+.hero p {
+    font-size: 1.3rem;
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+/* Section Titles */
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #2c3e50;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: var(--gradient-color);
+    margin: 0.5rem auto;
+    border-radius: 2px;
+}
+
+/* Games Section */
+.games-section {
+    padding: 5rem 0;
+    background-color: #fff;
+}
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    margin-top: 2rem;
+}
+
+.game-item {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    border: 1px solid #eaeaea;
+}
+
+.game-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.game-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-bottom: 3px solid #17cb11;
+}
+
+.game-item h3 {
+    font-size: 1.5rem;
+    margin: 1.2rem 1.2rem 0.5rem;
+    color: #2c3e50;
+}
+
+.game-item p {
+    color: #666;
+    margin: 0 1.2rem;
+    font-size: 0.95rem;
+}
+
+.game-item .price {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #17cb11;
+    margin: 1rem 1.2rem;
+}
+
+/* Merchandise Section */
+.merchandise-section {
+    padding: 5rem 0;
+    background-color: #f8f9fa;
+}
+
+.merch-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.merch-item {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+    transition: all 0.3s ease;
+    border: 1px solid #eaeaea;
+}
+
+.merch-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.merch-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-bottom: 3px solid #f58300de;
+}
+
+.merch-item h3 {
+    font-size: 1.3rem;
+    margin: 1rem 1rem 0.5rem;
+    color: #2c3e50;
+}
+
+.merch-item p {
+    color: #666;
+    margin: 0 1rem;
+    font-size: 0.9rem;
+    min-height: 40px;
+}
+
+.merch-item .price {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #f58300de;
+    margin: 0.8rem 1rem;
+}
+
+/* Buttons */
+button {
+    background: var(--gradient-color);
+    color: white;
+    border: none;
+    padding: 0.9rem 1.8rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 1rem 1.2rem 1.5rem;
+    width: calc(100% - 2.4rem);
+    letter-spacing: 0.5px;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(106, 17, 203, 0.3);
+}
+
+
+/* Footer */
+footer {
+    --background-color:var(--background-color);
+    color: black;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+footer p {
+    opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem 0;
+    }
+    
+    nav ul {
+        gap: 1rem;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero p {
+        font-size: 1.1rem;
+        padding: 0 1rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .games-grid,
+    .merch-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .newsletter-form {
+        flex-direction: column;
+        padding: 0 1rem;
+    }
+    
+    .newsletter-form input,
+    .newsletter-form button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+    
+    .logo {
+        font-size: 1.8rem;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero {
+        padding: 4rem 0;
+    }
 }
