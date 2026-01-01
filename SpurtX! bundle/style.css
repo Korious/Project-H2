@@ -117,14 +117,20 @@ section h2 {
 
 /* Footer */
 footer {
-  background: #0f172a;
+  background: black;
   color: #e5e7eb;
-  padding: 4rem 2rem 2rem;
+  padding: 5px;
+  margin-top: 2rem;
+}
+
+footer p {
+  text-align: center;
+  font-size: 0.9rem;
+  opacity: 0.7;
 }
 
 footer .footer-note {
-  text-align: centre;
-  margin-top: 3rem;
+  text-align: center;
   font-size: 0.9rem;
   opacity: 0.7;
 }
