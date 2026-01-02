@@ -129,9 +129,18 @@ section .container{
     padding:1.0rem 0;
 }
 
+div p{
+  text-align: justify;
+}
+
+/* book experts
+div .card-text p{
+  text-align: justify;
+} */
+
 @media (max-width: 768px) {
   .hero {
     min-height: 60vh;
-    text-align: centre;
+    text-align: center;
   }
 }
