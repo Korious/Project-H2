@@ -32,3 +32,36 @@ document.querySelectorAll('.add-to-cart').forEach(btn => {
 closeBtn.addEventListener('click', () => {
   popup.hidden = true;
 });
+
+// /* Cart List */
+// const cart = [];
+// const cartImg = document.getElementById("cart");
+// const cartList = document.getElementById("cartList");
+// const cartItems = document.getElementById("cartItems");
+
+// // Grab ALL add-to-cart buttons
+// const addToCartButtons = document.querySelectorAll(".add-to-cart");
+
+// // Add items when any add-to-cart button is clicked
+// addToCartButtons.forEach(button => {
+//   button.addEventListener("click", () => {
+//     const itemName = button.dataset.item;
+//     cart.push(itemName);
+//   });
+// });
+
+// // Toggle cart display
+// Cart.addEventListener("click", (e) => {
+//   e.preventDefault();
+
+//   cartList.style.display =
+//     cartList.style.display === "block" ? "none" : "block";
+
+//   cartItems.innerHTML = "";
+
+//   cart.forEach(item => {
+//     const li = document.createElement("li");
+//     li.textContent = item;
+//     cartItems.appendChild(li);
+//   });
+// });
