@@ -35,20 +35,20 @@
                 <h3>Spurt! Empire Game - dark green</h3>
                 <p>An original Spurt! game for 4-8 players. Can you be the last business standing inspite of market events?</p>
                 <p class="price">$19.99</p>
-                <button>Add to Cart</button>
+                <button class="add-to-cart" data-product="Spurt! Empire Game - dark green">Add to Cart</button>
             </div>
             <div class="game-item">
                 <img src="assets/light green back.png" alt="Spurt! Empire Game Box">
                 <h3>Spurt! Empire Game - light green</h3>
                 <p>An original Spurt! game for 4-8 players. Can you navigate competition with negotiation?</p>
                 <p class="price">$19.99</p>
-                <button>Add to Cart</button>
+                <button class="add-to-cart" data-product="Spurt! Empire Game - light green">Add to Cart</button>
             </div><div class="game-item">
                 <img src="assets/orange back.png" alt="Spurt! Empire Game Box">
                 <h3>Spurt! Empire Game - orange</h3>
                 <p>An original Spurt! game for 4-8 players. Can you get all the advantage cards?</p>
                 <p class="price">$19.99</p>
-                <button>Add to Cart</button>
+                <button class="add-to-cart" data-product="Spurt! Empire Game - orange">Add to Cart</button>
             </div>
         </div>
     </div>
@@ -63,33 +63,31 @@
                 <h3>Spurt! T-shirt</h3>
                 <p>100% Cotton, available in multiple sizes</p>
                 <p class="price">$4.99</p>
-                <button>Add to Cart</button>
+                <button class="add-to-cart" data-product="Spurt T-shirt">Add to Cart</button>
             </div>
             <div class="merch-item">
                 <img src="assets/mug.png" alt="Spurt Mug">
                 <h3>Spurt! Mug</h3>
                 <p>Ceramic mug with Spurt! design</p>
                 <p class="price">$2.99</p>
-                <button>Add to Cart</button>
+                <button class="add-to-cart" data-product="Spurt! mug">Add to Cart</button>
             </div>
             <div class="merch-item">
                 <img src="assets/sticker.png" alt="Spurt sticker">
                 <h3>Spurt! Sticker</h3>
                 <p>Carry the brand on your devices and items</p>
                 <p class="price">$0.99</p>
-                <button>Add to Cart</button>
+                <button class="add-to-cart" data-product="Spurt! sticker">Add to Cart</button>
             </div>
             <div class="merch-item">
                 <img src="assets/hoodie orange.png" alt="Spurt hoodie">
                 <h3>Spurt! unisex Hoodie</h3>
                 <p>100% polyester, available in multiple sizes</p>
                 <p class="price">$3.99</p>
-                <button>Add to Cart</button>
+                <button class="add-to-cart" data-product="Spurt! Hoodie">Add to Cart</button>
             </div>
         </div>
     </div>
-</section>
-
 </section>
 
 <footer>
@@ -98,5 +96,15 @@
     </div>
 </footer>
 
+<!----- Popup for items--->
+<div class="popup" id="cartPopup" hidden >
+  <div class="popup-content">
+    <p id="popupMessage"></p>
+    <button class="close-popup" onclick="closePopup()">OK</button>
+  </div>
+</div>
+
+  <!-- Scripts -->
+<script src="../main.js"></script>
 </body>
 </html>
