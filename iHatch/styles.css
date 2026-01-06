@@ -144,8 +144,11 @@ div .card-text p{
     min-height: 60vh;
     text-align: center;
   }
-  section container{
+  section p{
     margin: 25px;
   }
 
+  .container .row{
+    margin: 25px;
+  }
 }
