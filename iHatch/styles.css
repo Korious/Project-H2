@@ -144,7 +144,7 @@ div .card-text p{
     min-height: 60vh;
     text-align: center;
   }
-  section p{
+  section p,h2,h3,h1{
     margin: 18px;
   }
 
