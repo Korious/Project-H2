@@ -221,63 +221,109 @@ footer .footer-note {
   opacity: 0.7;
 }
 
-/* SpurtX! Thank You Page*/
+/* SpurtX! Thank You Page */
 .thank-you-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
   background-image: url("assets/celebration.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+  width: 100%;
+  padding: 2rem;
 }
 
 .thank-you-card {
-  padding: 3rem;
-  max-width: 600px;
-  margin: auto;
-  margin-left: 150px;
-  background: #f8f9fb;
+  width: 100%;
+  max-width: 480px;
+  padding: 2.5rem 2rem;
   border-radius: 24px;
   text-align: center;
+  background: #f8f9fb;
   overflow: hidden;
   box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
+/* Headline */
+.thank-you-card h1 {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+/* Subtitle/Message */
 .thank-you-card p {
-  margin: 1rem 0 2rem;
-  color: #334155;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: #555;
 }
 
+/* Back Home Button */
 .back-home {
   display: inline-block;
-  padding: 0.75rem 1.5rem;
-  background: #b9d656;
+  padding: 0.75rem 2rem;
+  background: #009051;
   color: white;
   text-decoration: none;
   border-radius: 999px;
-  font-size: 0.9rem;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.back-home:hover {
+  background: #a0c044;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(185, 214, 86, 0.3);
 }
 
 /* Mobile */
 @media (max-width: 768px) {
-  .thank-you-card {
-    grid-template-columns: 1fr;
+  .thank-you-container {
+    padding: 1rem;
   }
+  
+  .thank-you-card {
+    padding: 2rem 1.5rem;
+    max-width: 90%;
+  }
+  
+}
 
-  .thank-you-image {
-    min-height: 220px;
-    max-width:auto;
+/* Small mobile devices */
+@media (max-width: 480px) {
+  .thank-you-container {
+    padding: 0.5rem;
+  }
+  
+  .thank-you-card {
+    padding: 1.5rem 1rem;
+  }
+  
+  .thank-you-card h1 {
+    font-size: 1.75rem;
+  }
+  
+  .thank-you-card p {
+    font-size: 0.95rem;
+  }
+  
+  .back-home {
+    width: 100%;
+    max-width: 200px;
   }
 }
 
-/* Responsive tweaks */
-@media (max-width: 600px) {
-  .hero {
-    padding: 3rem 1.5rem;
-  }
-
-  section {
-    padding: 2rem 1.5rem;
+/* Larger screens */
+@media (min-width: 1200px) {
+  .thank-you-card {
+    max-width: 520px;
+    padding: 3rem;
   }
 }
