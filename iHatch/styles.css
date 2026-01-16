@@ -37,7 +37,7 @@ nav{
 
 .hero {
   min-height: 80vh;
-  background-image: url("./assets/hero.jpg");
+  background-image: url("./assets/hero\ \(1\).jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -46,6 +46,10 @@ nav{
   position: relative;
   color: var(--texts-color);
   border: 20px; 
+}
+
+.hero p{
+    text-align:center;
 }
 
 .hero::before {
