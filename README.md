@@ -20,6 +20,7 @@ Project documentation for iHatch, Spurt! merch and SpurtX!
     - assets/
     - index.html
     - style.css
+    - 
 
   - **SpurtX! bundle/**
     - assets/
@@ -27,8 +28,5 @@ Project documentation for iHatch, Spurt! merch and SpurtX!
     - style.css
     - thankyou.html
     - index.js
-
-  - **main.js**
-      <p>Global js file</p>
 
   - **README.md**

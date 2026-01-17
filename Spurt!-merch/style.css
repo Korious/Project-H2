@@ -44,15 +44,33 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5rem 0;
+    padding: 0.9rem 0;
+}
+
+nav .cart {
+    width: 24px;
+    height: 24px;
+    max-width: 24px;
+    max-height: 24px;
+    padding: 3px 4px;
+    margin: 0;
+    display: block;
+}
+
+nav img {
+    height: 20px;
+    width: auto;
+    display: block;
 }
 
 .logo {
-    max-width: 2rem;
+    max-width: 3rem;
 }
 
 nav ul {
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     list-style: none;
     gap: 2.5rem;
 }
@@ -72,41 +90,65 @@ nav ul li a:hover {
     transform: translateY(-2px);
 }
 
-nav .cart {
-    max-width: 24px;
-    height: auto;
-    filter: invert(1);
+#cart {
+    background: var(--gradient-color);
+    color: #ffffff;
+    border: none;
+    font-size: 1rem;        
+    font-weight: 600;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: auto;
+    margin: 0;
+}
+
+nav button {
+    white-space: nowrap;
+}
+
+nav button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.25);
 }
 
 /* Cart list container */
 #cartList {
-  position: fixed;
-  top: 80px;             
-  right: 20px;
-  width: 260px;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
-  padding: 16px;
-  display: none;
-  z-index: 1000;
+    position: fixed;
+    top: 70px;
+    right: 20px;
+    width: 220px;
+    max-height: 400px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+    padding: 12px;
+    display: none;
+    z-index: 1000;
+    font-size: 0.9rem;
+    overflow-y: auto;
 }
 
-/* Cart items */
 #cartItems {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+    list-style: none;
 }
 
 #cartItems li {
-  padding: 10px 0;
-  border-bottom: 1px solid #eee;
-  font-size: 14px;
+    padding: 6px 8px;
+    border-bottom: 1px solid #eeeeee;
+    color: #333333;
+    font-weight: 500;
 }
 
 #cartItems li:last-child {
-  border-bottom: none;
+    border-bottom: none;
+}
+
+#cartTotal {
+    margin-top: 8px;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #17cb11;
 }
 
 /* Hero Section */
@@ -343,6 +385,7 @@ footer p {
     
     nav ul {
         gap: 1rem;
+        justify-content: center;
     }
     
     .hero h1 {
