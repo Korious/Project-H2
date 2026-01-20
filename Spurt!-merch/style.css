@@ -93,6 +93,7 @@ nav ul li a:hover {
 #cart {
     background: var(--gradient-color);
     color: #ffffff;
+    position:relative;
     border: none;
     font-size: 1rem;        
     font-weight: 600;
@@ -101,6 +102,21 @@ nav ul li a:hover {
     transition: all 0.3s ease;
     width: auto;
     margin: 0;
+}
+
+.cart-count {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background: #ff9600;
+  color: #ffffff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 999px;
+  min-width: 18px;
+  text-align: center;
+  display: none;
 }
 
 nav button {
@@ -122,11 +138,17 @@ nav button:hover {
     background: #ffffff;
     border-radius: 12px;
     box-shadow: 0 12px 30px rgba(0,0,0,0.15);
-    padding: 12px;
+    padding: 16px;
     display: none;
     z-index: 1000;
     font-size: 0.9rem;
     overflow-y: auto;
+}
+
+#checkoutForm input{
+    border-radius: 8px;
+    border: 1px solid #cccccc;
+    padding: 5px;
 }
 
 #cartItems {
@@ -375,66 +397,136 @@ footer p {
   animation: popupFadeIn 0.3s ease;
 }
 
+.remove-item {
+  background: none;
+  border: none;
+  color: #ff4d4d;
+  font-size: 0.7rem;
+  cursor: pointer;
+  padding: 0 4px;
+}
+
+.remove-item:hover {
+  transform: scale(1.1);
+}
+
 /* Responsive Design */
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  nav ul {
+    gap: 1.0rem;
+  }
+
+  .games-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+
+  .merch-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+}
+
 @media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        gap: 1rem;
-        padding: 1rem 0;
-    }
-    
-    nav ul {
-        gap: 1rem;
-        justify-content: center;
-    }
-    
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-    
-    .hero p {
-        font-size: 1.1rem;
-        padding: 0 1rem;
-    }
-    
-    .section-title {
-        font-size: 2rem;
-    }
-    
-    .games-grid,
-    .merch-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-    
+  header {
+    padding: 0 1rem;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  nav ul {
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  #cart {
+    align-self: center;
+  }
+
+  .hero {
+    padding: 4.5rem 0;
+  }
+
+  .hero h1 {
+    font-size: 2.4rem;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+    padding: 0 1rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  button {
+    font-size: 0.95rem;
+    padding: 0.8rem 1.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    text-align: centre;
+  }
+
+  nav ul li a {
+    padding: 0.4rem 0.9rem;
+    font-size: 1rem;
+  }
+
+  #cart {
+    padding: 0.6rem 1rem;
+  }
+
+  .cart-count {
+    top: -5px;
+    right: -5px;
+    font-size: 0.65rem;
+    min-width: 16px;
+  }
+
+  #cartList {
+    left: 10px;
+    right: 10px;
+    width: auto;
+    max-height: 60vh;
+  }
+
+  .game-item img {
+    height: 200px;
+  }
+
+  .merch-item img {
+    height: 180px;
+  }
 }
 
 @media (max-width: 480px) {
-    nav ul {
-        flex-direction: column;
-        text-align: center;
-        gap: 0.5rem;
-    }
-    
-    .logo {
-        font-size: 1.8rem;
-    }
-    
-    .hero h1 {
-        font-size: 2rem;
-    }
-    
-    .hero {
-        padding: 4rem 0;
-    }
-}
+  .hero {
+    padding: 3.5rem 0;
+  }
 
-/*Cart Fix Mobile*/
-@media (max-width: 600px) {
-  #cartList {
-    right: 10px;
-    left: 10px;
-    width: auto;
-    top: 70px;
+  .hero h1 {
+    font-size: 1.9rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .section-title {
+    font-size: 1.7rem;
+  }
+
+  button {
+    font-size: 0.9rem;
   }
 }
